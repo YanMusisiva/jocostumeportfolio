@@ -535,7 +535,7 @@ const PortfolioPage = () => {
               Nos Créations <span className="text-[#f0a500]">Signature</span>
             </h2>
             <p className="text-xl text-slate-300">
-              Chaque pièce est une œuvre d'art
+              Chaque pièce est une œuvre d&apos;art
             </p>
           </div>
 
