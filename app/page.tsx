@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   Scissors,
   Award,
@@ -207,13 +208,7 @@ const PortfolioPage = () => {
     onZoomOut: () => void;
   };
 
-  const ImageModal = ({
-    image,
-    zoomLevel,
-    onClose,
-    onZoomIn,
-    onZoomOut,
-  }: ImageModalProps) => {
+  const ImageModal = ({ image, zoomLevel }: ImageModalProps) => {
     if (!image) return null;
 
     return (
@@ -253,9 +248,10 @@ const PortfolioPage = () => {
           className="max-w-6xl max-h-[90vh] overflow-auto"
           onClick={(e) => e.stopPropagation()}
         >
-          <img
+          <Image
             src={image.image}
             alt={image.title}
+            fill
             style={{
               transform: `scale(${zoomLevel})`,
               transition: "transform 0.3s ease",
@@ -311,7 +307,7 @@ const PortfolioPage = () => {
                 Nos <span className="text-[#f0a500]">Œuvres</span> Complètes
               </h1>
               <p className="text-xl text-slate-300">
-                L'excellence dans chaque création
+                L&apos;excellence dans chaque création
               </p>
             </div>
 
@@ -331,9 +327,10 @@ const PortfolioPage = () => {
                         : "h-48"
                     }`}
                   >
-                    <img
+                    <Image
                       src={project.image}
                       alt={project.title}
+                      fill
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -458,12 +455,12 @@ const PortfolioPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-6xl md:text-7xl font-bold mb-6 text-white leading-tight">
-                L'Art de la Couture{" "}
-                <span className="text-[#f0a500]">d'Exception</span>
+                L&apos;Art de la Couture{" "}
+                <span className="text-[#f0a500]">d&apos;Exception.</span>
               </h1>
               <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                Découvrez l'excellence artisanale où chaque fil raconte une
-                histoire de raffinement et d'élégance intemporelle.
+                Découvrez l&apos;excellence artisanale où chaque fil raconte une
+                histoire de raffinement et d&apos;élégance intemporelle.
               </p>
               <div className="flex gap-4">
                 <a
@@ -504,7 +501,8 @@ const PortfolioPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-4 text-white">
-              Nos Services <span className="text-[#f0a500]">d'Excellence</span>
+              Nos Services{" "}
+              <span className="text-[#f0a500]">d&apos;Excellence</span>
             </h2>
             <p className="text-xl text-slate-300">
               Un savoir-faire unique au service de votre élégance
@@ -557,9 +555,10 @@ const PortfolioPage = () => {
                       : "h-48"
                   }`}
                 >
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
+                    fill
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -597,7 +596,8 @@ const PortfolioPage = () => {
                 Contactez<span className="text-[#f0a500]">-Nous</span>
               </h2>
               <p className="text-xl text-slate-300 mb-8">
-                Prenez rendez-vous pour découvrir l'excellence de notre atelier
+                Prenez rendez-vous pour découvrir l&apos;excellence de notre
+                atelier
               </p>
 
               <div className="space-y-6">
@@ -621,7 +621,7 @@ const PortfolioPage = () => {
                   <MapPin className="w-6 h-6 text-[#f0a500] mt-1" />
                   <div>
                     <h3 className="font-semibold text-white mb-1">Adresse</h3>
-                    <p className="text-slate-300">Kampala, Uganda</p>
+                    <p className="text-slate-300">Goma, DRC</p>
                   </div>
                 </div>
 
@@ -709,7 +709,7 @@ const PortfolioPage = () => {
             Tous droits réservés.
           </p>
           <p className="text-sm">
-            Atelier de Couture d'Excellence - Kampala, Uganda
+            Atelier de Couture d&apos;Excellence - Goma, DRC
           </p>
         </div>
       </footer>
