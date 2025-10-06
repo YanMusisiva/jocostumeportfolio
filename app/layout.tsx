@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AsFindcountrylinks",
-  description: "Liens pour trouver des cadeaux par pays",
+  title: "JoCostume Couture",
+  description: "Custom handmade costumes and accessories",
 };
 
 export default function RootLayout({
