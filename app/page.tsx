@@ -68,8 +68,8 @@ const PortfolioPage = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Collection Mariage Royale",
-      category: "Mariée",
+      title: "Tenues traditionnelles modernes",
+      category: "Responsable",
       image: "/1.jpg",
       height: "tall",
     },
@@ -82,29 +82,29 @@ const PortfolioPage = () => {
     },
     {
       id: 3,
-      title: "Robes de Soirée Élégantes",
+      title: "Soirée Élégantes",
       category: "Soirée",
       image: "/3.jpg",
       height: "short",
     },
     {
       id: 4,
-      title: "Tenues Traditionnelles Modernes",
-      category: "Traditionnel",
+      title: "Soirée Élégantes",
+      category: "Soirée en costume",
       image: "/4.jpg",
       height: "tall",
     },
     {
       id: 5,
-      title: "Collection Business Femme",
-      category: "Professionnel",
+      title: "Collection d'évènements",
+      category: "Evènementiel",
       image: "/5.jpg",
       height: "medium",
     },
     {
       id: 6,
-      title: "Costumes Cérémonie Enfants",
-      category: "Enfants",
+      title: "Costumes Cérémonie",
+      category: "Cérémonie",
       image: "/6.jpg",
       height: "short",
     },
@@ -114,7 +114,7 @@ const PortfolioPage = () => {
     ...projects,
     {
       id: 7,
-      title: "Robes Cocktail Premium",
+      title: "Costume Soirée",
       category: "Soirée",
       image: "/7.jpg",
       height: "tall",
@@ -135,8 +135,8 @@ const PortfolioPage = () => {
     },
     {
       id: 10,
-      title: "Robes de Bal Exclusive",
-      category: "Soirée",
+      title: "Costume Exclusive",
+      category: "Professionnel",
       image: "/10.jpg",
       height: "tall",
     },
@@ -163,8 +163,9 @@ const PortfolioPage = () => {
     },
     {
       id: 14,
-      title: "Style Corporate",
-      category: "Professionnel",
+
+      title: "Élégance Parisienne",
+      category: "Céremonie",
       image: "/14.jpg",
       height: "medium",
     },
@@ -173,6 +174,111 @@ const PortfolioPage = () => {
       title: "Mariage Romantique",
       category: "Mariée",
       image: "/15.jpg",
+      height: "tall",
+    },
+    {
+      id: 16,
+      title: "Collection Afro-fusion",
+      category: "Mariée",
+      image: "/16.jpg",
+      height: "short",
+    },
+    {
+      id: 17,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/17.jpg",
+      height: "medium",
+    },
+    {
+      id: 18,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/18.jpg",
+      height: "short",
+    },
+    {
+      id: 19,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/19.jpg",
+      height: "tall",
+    },
+    {
+      id: 20,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/20.jpg",
+      height: "medium",
+    },
+    {
+      id: 21,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/21.jpg",
+      height: "short",
+    },
+    {
+      id: 22,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/22.jpg",
+      height: "tall",
+    },
+    {
+      id: 23,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/23.jpg",
+      height: "short",
+    },
+    {
+      id: 24,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/24.jpg",
+      height: "medium",
+    },
+    {
+      id: 25,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/25.jpg",
+      height: "tall",
+    },
+    {
+      id: 26,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/26.jpg",
+      height: "short",
+    },
+    {
+      id: 27,
+      title: "Mariage Romantique",
+      category: "Mariée",
+      image: "/27.jpg",
+      height: "tall",
+    },
+    {
+      id: 28,
+      title: "Style Corporate",
+      category: "Professionnel",
+      image: "/28.jpg",
+      height: "medium",
+    },
+    {
+      id: 29,
+      title: "Collection Pro",
+      category: "Professionnel",
+      image: "/29.jpg",
+      height: "short",
+    },
+    {
+      id: 30,
+      title: "Style Corporate",
+      category: "Professionnel",
+      image: "/30.jpg",
       height: "tall",
     },
   ];
@@ -245,7 +351,7 @@ const PortfolioPage = () => {
         </div>
 
         <div
-          className="max-w-6xl max-h-[90vh] overflow-auto"
+          className="w-full h-full max-w-6xl max-h-[90vh] overflow-auto"
           onClick={(e) => e.stopPropagation()}
         >
           <Image
@@ -255,15 +361,10 @@ const PortfolioPage = () => {
             style={{
               transform: `scale(${zoomLevel})`,
               transition: "transform 0.3s ease",
+              objectFit: "contain",
             }}
-            className="w-full h-auto rounded-lg"
+            className="w-full object-cover h-auto rounded-lg"
           />
-          <div className="bg-[#1a3a52] p-6 mt-4 rounded-lg">
-            <span className="inline-block px-3 py-1 bg-[#f0a500] text-[#1a3a52] text-xs font-semibold mb-3">
-              {image.category}
-            </span>
-            <h3 className="text-2xl font-bold text-white">{image.title}</h3>
-          </div>
         </div>
       </div>
     );
@@ -379,19 +480,19 @@ const PortfolioPage = () => {
               href="#services"
               className="text-slate-200 hover:text-[#f0a500] transition-colors font-medium"
             >
-              Services
+              SERVICES
             </a>
             <a
               href="#projets"
               className="text-slate-200 hover:text-[#f0a500] transition-colors font-medium"
             >
-              Projets
+              PROJETS
             </a>
             <a
               href="#contact"
               className="text-slate-200 hover:text-[#f0a500] transition-colors font-medium"
             >
-              Contact
+              CONTACT
             </a>
           </div>
 
@@ -462,16 +563,16 @@ const PortfolioPage = () => {
                 Découvrez l&apos;excellence artisanale où chaque fil raconte une
                 histoire de raffinement et d&apos;élégance intemporelle.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-4 md:gap-2">
                 <a
                   href="#contact"
-                  className="px-8 py-4 bg-[#f0a500] text-[#1a3a52] font-bold hover:bg-[#d89400] transition-all shadow-lg shadow-[#f0a500]/20"
+                  className="px-6 py-4 bg-[#f0a500] text-[#1a3a52] font-bold hover:bg-[#d89400] transition-all shadow-lg shadow-[#f0a500]/20"
                 >
                   Prendre Rendez-vous
                 </a>
                 <a
                   href="#projets"
-                  className="px-8 py-4 border-2 border-[#f0a500] text-[#f0a500] font-bold hover:bg-[#f0a500] hover:text-[#1a3a52] transition-all"
+                  className="px-6 py-4 border-2 border-[#f0a500] text-[#f0a500] font-bold hover:bg-[#f0a500] hover:text-[#1a3a52] transition-all"
                 >
                   Voir Nos Créations
                 </a>
@@ -480,17 +581,13 @@ const PortfolioPage = () => {
             <div className="relative flex justify-center">
               <div className="absolute inset-0 bg-[#f0a500] blur-3xl opacity-10"></div>
               <div className="relative w-80 h-80 bg-white rounded-full flex items-center justify-center shadow-2xl border-4 border-[#1a3a52]">
-                <div className="text-center">
-                  <div className="text-8xl font-bold text-[#1a3a52] mb-2">
-                    JO
-                  </div>
-                  <div className="text-3xl font-light text-[#1a3a52] italic">
-                    Costume
-                  </div>
-                  <div className="mt-4 text-sm text-[#f0a500] font-semibold">
-                    ATELIER DE COUTURE
-                  </div>
-                </div>
+                <Image
+                  src={"/logo.jpg"}
+                  alt={"logo"}
+                  width={400}
+                  height={400}
+                  className="rounded-4xl"
+                />
               </div>
             </div>
           </div>
@@ -590,8 +687,8 @@ const PortfolioPage = () => {
 
       <section id="contact" className="py-20 px-6 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
+          <div>
+            <div className="flex flex-col items-center space-y-2.5 justify-center ">
               <h2 className="text-5xl font-bold mb-6 text-white">
                 Contactez<span className="text-[#f0a500]">-Nous</span>
               </h2>
@@ -605,7 +702,9 @@ const PortfolioPage = () => {
                   <Phone className="w-6 h-6 text-[#f0a500] mt-1" />
                   <div>
                     <h3 className="font-semibold text-white mb-1">Téléphone</h3>
-                    <p className="text-slate-300">+256 XXX XXX XXX</p>
+                    <p className="text-slate-300 hover:text-[#f0a500]">
+                      +243 978 591 709
+                    </p>
                   </div>
                 </div>
 
@@ -613,7 +712,12 @@ const PortfolioPage = () => {
                   <Mail className="w-6 h-6 text-[#f0a500] mt-1" />
                   <div>
                     <h3 className="font-semibold text-white mb-1">Email</h3>
-                    <p className="text-slate-300">contact@jocostume.com</p>
+                    <a
+                      href="mailto:jonascostume50@gmail.com"
+                      className="text-slate-300 hover:text-[#f0a500]"
+                    >
+                      jonascostume50@gmail.com
+                    </a>
                   </div>
                 </div>
 
@@ -621,7 +725,9 @@ const PortfolioPage = () => {
                   <MapPin className="w-6 h-6 text-[#f0a500] mt-1" />
                   <div>
                     <h3 className="font-semibold text-white mb-1">Adresse</h3>
-                    <p className="text-slate-300">Goma, DRC</p>
+                    <p className="text-slate-300 hover:text-[#f0a500]">
+                      Goma, DRC
+                    </p>
                   </div>
                 </div>
 
@@ -644,72 +750,28 @@ const PortfolioPage = () => {
                 </div>
               </div>
             </div>
-
-            <div className="bg-gradient-to-br from-[#1a3a52] to-slate-800 p-8 border-2 border-[#f0a500]/20">
-              <div className="space-y-6">
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-[#f0a500]">
-                    Nom Complet
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                    className="w-full px-4 py-3 bg-slate-900 border-2 border-slate-700 focus:border-[#f0a500] outline-none transition-colors text-white"
-                    placeholder="Votre nom"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-[#f0a500]">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                    className="w-full px-4 py-3 bg-slate-900 border-2 border-slate-700 focus:border-[#f0a500] outline-none transition-colors text-white"
-                    placeholder="votre@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-[#f0a500]">
-                    Message
-                  </label>
-                  <textarea
-                    rows={5}
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    className="w-full px-4 py-3 bg-slate-900 border-2 border-slate-700 focus:border-[#f0a500] outline-none transition-colors text-white resize-none"
-                    placeholder="Décrivez votre projet..."
-                  />
-                </div>
-                <button
-                  onClick={handleSubmit}
-                  className="w-full py-4 bg-[#f0a500] text-[#1a3a52] font-bold hover:bg-[#d89400] transition-all shadow-lg shadow-[#f0a500]/30"
-                >
-                  Envoyer le Message
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <footer className="py-8 px-6 border-t border-slate-800 bg-[#1a3a52]">
+      <footer className="py-4 px-6 border-t border-slate-800 bg-[#1a3a52]">
         <div className="max-w-7xl mx-auto text-center text-slate-300">
           <p className="mb-2">
             © 2025{" "}
             <span className="text-[#f0a500] font-semibold">JO Costume</span>.
             Tous droits réservés.
           </p>
-          <p className="text-sm">
-            Atelier de Couture d&apos;Excellence - Goma, DRC
+          <p>Atelier de Couture d&apos;Excellence - Goma, DRC</p>
+          <p className="mt-2 text-sm">
+            Website made by{" "}
+            <a
+              href="https://asikireportfolio.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#f0a500]"
+            >
+              John Asikire
+            </a>
           </p>
         </div>
       </footer>
