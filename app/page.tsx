@@ -33,19 +33,9 @@ const PortfolioPage = () => {
   };
 
   const [currentPage, setCurrentPage] = useState("home");
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
 
   const [selectedImage, setSelectedImage] = useState<Project | null>(null);
   const [zoomLevel, setZoomLevel] = useState(1);
-
-  const handleSubmit = (): void => {
-    alert("Message envoyé! Nous vous contacterons bientôt.");
-    setFormData({ name: "", email: "", message: "" });
-  };
 
   const openModal = (project: Project) => {
     setSelectedImage(project);
